@@ -1,7 +1,6 @@
 body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
-  background-color: rgb(131, 221, 228);
 }
 
 #all-products {
@@ -14,7 +13,7 @@ body {
   justify-content: center;
 }
 .product {
-  background-color: rgb(179, 255, 226);
+  background-color: rgb(242, 179, 255);
 }
 
 .single-product {

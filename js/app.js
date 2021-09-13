@@ -13,21 +13,25 @@ const showProducts = (products) => {
   for (const product of allProducts) {
     const image = product.image;
     const div = document.createElement("div");
-    div.classList.add("product", "card", "h-100", "mx-1");
+    div.classList.add("card", "product", "mx-1");
     div.innerHTML = `<div class="single-product">
       <div class="img-div card-img-top" >
     <img class="product-image" src=${image}></img>
       </div>
       <div class="card-body">
-      <h3  class="card-title">${product.title}</h3>
+      <h3  class="card-title">${product.title.slice(0, 20)}</h3>
       <p>Category: ${product.category}</p>
       <h4>Rating:${product.rating.rate}</h4>
       <h5>Rated by ${product.rating.count} People</h5>
       <h2>Price: $ ${product.price}</h2>
       </div>
-        <div class="card-footer bg-white border-0">
-        <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-        <button onclick="loadDetails('${product.id}')" id="details-btn" class="btn btn-danger" >Details</button>
+        <div class="card-footer bg-transparent border-0">
+        <button onclick="addToCart(${product.id},${
+      product.price
+    })" id="addToCart-btn" class="buy-now btn btn-success me-3">add to cart</button>
+        <button onclick="loadDetails('${
+          product.id
+        }')" id="details-btn" class="btn btn-danger ms-3" >Details</button>
         </div>
       </div>
       `;
